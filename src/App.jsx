@@ -1,7 +1,9 @@
+import SideBar from "./components/UI/SideBar";
+
 function App() {
   return (
-    <div className="min-h-screen">
-      <h1>Hello World</h1>
+    <div className="flex h-screen">
+      <SideBar />
     </div>
   );
 }
