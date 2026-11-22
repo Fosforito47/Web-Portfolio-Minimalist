@@ -19,6 +19,7 @@ export function Button({
   Icon,
   iconOnly = false,
   iconSize = "18",
+  translate = false,
   className = "",
   disabled = false,
 }) {
@@ -32,14 +33,18 @@ export function Button({
    * enabled:hover:scale-[1.02]: al pasar el mouse, el botón crece levemente.
    * active:scale-[0.98]: al presionar, se encoge un poco.
    * disabled:opacity-40 disabled:cursor-not-allowed: cuando está desactivado, se ve opaco y el cursor cambia.
+   * hover:-translate-y-1: mueve el boton un pixel hacia arriba cuando se hace hover
    */
+
+  const hoverTranslate = translate ? "enabled:hover:-translate-y-1" : "";
+
   const baseStyle = `
     inline-flex items-center justify-center gap-2
 	text-sm font-regular rounded-3xl 
 	transition-all duration-300 transform 
-	enabled:hover:-translate-y-1
 	disabled:opacity-40 disabled:cursor-not-allowed
-  `;
+    ${hoverTranslate}
+   `;
 
   // Variantes de estilo
   const variants = {
