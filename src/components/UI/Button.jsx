@@ -40,7 +40,7 @@ export function Button({
 
   const baseStyle = `
     inline-flex items-center justify-center gap-2
-	text-sm font-regular rounded-3xl 
+	text-md font-medium
 	transition-all duration-300 transform 
 	disabled:opacity-40 disabled:cursor-not-allowed
     ${hoverTranslate}
@@ -49,17 +49,17 @@ export function Button({
   // Variantes de estilo
   const variants = {
     primary: `
-		bg-primary
-		text-white
-        enabled:hover:bg-accent
-        enabled:hover:shadow-[0_0_20px_rgba(255,0,110,0.5)]
+		bg-primary text-white rounded-3xl 
+		enabled:hover:bg-accent enabled:hover:text-white 
+        enabled:hover:border-accent
+        px-[20px] py-[8px]
 		`,
     secondary: `
-		border-2 border-primary text-primary
+        border-2 border-tertiary/50  text-primary rounded-3xl 
 		enabled:hover:bg-accent enabled:hover:text-white 
-        enabled: hover:border-2  enabled:hover:border-accent
-	    enabled:hover:shadow-[0_0_20px_rgba(255,0,110,0.5)]
-		`,
+        enabled:hover:border-2  enabled:hover:border-accent
+        px-[20px] py-[6px]
+    `,
     ghost: `
 		enabled:hover:text-primary
         enabled:hover:text-accent
@@ -86,9 +86,7 @@ export function Button({
    * min-w-10 : evita que se reduzca.
    * p-0: elimina el padding interno.
    */
-  const sizeStyle = iconOnly
-    ? "h-10 w-10 min-w-10 p-0 "
-    : "px-[26px] py-[10px]";
+  const sizeStyle = iconOnly ? "h-10 w-10 min-w-10 p-0 " : "";
 
   // Construimos las clases con twMerge correctamente
   const finalClass = twMerge(baseStyle, variantStyle, sizeStyle, className);
