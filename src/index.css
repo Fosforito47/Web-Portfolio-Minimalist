@@ -1,7 +1,33 @@
 @import "tailwindcss";
 
+body {
+  font-family: "Inter", sans-serif;
+}
+.role {
+  font-size: 12px;
+  letter-spacing: 2px; /* spreads letters apart */
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 15px;
+}
+.section-title {
+  font-size: 4.5rem; /* 72px */
+  line-height: 1;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
 @theme {
   --color-sidebar: #e0e0e0;
+  --color-outline: #e0e0e0;
   --color-accent: #ed254e;
   --color-primary: #002a32;
+  --color-secondary: #5f777c;
+  --color-tertiary: #888;
+}
+
+@media (max-width: 480px) {
+  .role {
+    font-size: 10px;
+  }
 }

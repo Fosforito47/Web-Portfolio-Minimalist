@@ -1,18 +1,16 @@
-import { Button } from "./components/UI/Button";
-import { Chip } from "./components/UI/Chips";
+import Projects from "./components/Pages/Projects";
 import SideBar from "./components/UI/SideBar";
-import { Github } from "lucide-react";
 
 function App() {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen overflow-hidden">
+      {/* Sidebar */}
       <SideBar />
-      <div className="flex flex-col  gap-3">
-        <Button text="Send it" LeadingIcon={Github} />
-        <Button iconOnly Icon={Github} />
-        <Button text="Send it" variant="secondary" />
-        <Button text="Send it" variant="ghost" />
-      </div>
+
+      {/* Main content */}
+      <main className="flex-1 overflow-y-auto">
+        <Projects />
+      </main>
     </div>
   );
 }
