@@ -8,7 +8,9 @@ const links = [
 const SideBar = () => {
   return (
     <aside className="flex w-[220px] shrink-0 flex-col gap-8  border-r border-sidebar px-[30px] py-10">
-      <h1 className="text-[28px] font-bold leading-10">Boris Delgadillo</h1>
+      <h1 className="text-[28px] font-bold leading-10 text-primary">
+        Boris Delgadillo
+      </h1>
 
       <div className="flex flex-col gap-3">
         {links.map(({ href, label, active }) => (
