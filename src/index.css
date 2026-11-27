@@ -24,10 +24,21 @@ body {
   --color-primary: #002a32;
   --color-secondary: #5f777c;
   --color-tertiary: #888;
+
+  /* Estados para Chips*/
+  --color-success: #008f64; /* Verde neón tipo “terminal” */
+  --color-success-foreground: #00ff9c;
+  --color-error: #ff3333; /* Rojo neón, más vibrante que el destructive */
+  --color-warning: #ffc800; /* Amarillo brillante tipo advertencia futurista */
+  --color-info: #57b8ff; /* Azul cian frío que complementa tu secondary */
 }
 
 @media (max-width: 480px) {
   .role {
     font-size: 10px;
+  }
+  .section-title {
+    font-size: 2.6rem;
+    letter-spacing: -2px;
   }
 }

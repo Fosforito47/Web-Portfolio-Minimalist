@@ -17,7 +17,7 @@ const SideBar = () => {
     border-sidebar 
     px-4 md:px-[30px] 
     py-2 md:py-10
-    items-center md:items-start"
+    items-center md:items-stretch"
     >
       <h1 className="text-md grow items-center md:flex-none  md:text-[28px] font-bold  leading-5 md:leading-10 text-primary">
         Boris Delgadillo
