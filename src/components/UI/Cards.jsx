@@ -49,7 +49,7 @@ export function CardMedia({
   return (
     <div
       className={`
-                         rounded-t-xl  overflow-hidden 
+                         rounded-t-xl  overflow-hidden
                                 ${imgError || !PreviewImg ? `${defaultImg} flex items-center justify-center text-primary` : `${ratio}`}
                                 ${!imgError && PreviewImg ? `min-h-[150px] ` : ``} // Altura mínima para cuando hay imagen
                 `}
@@ -58,7 +58,11 @@ export function CardMedia({
         <img
           src={PreviewImg}
           alt={alt}
-          className={`${className} w-full h-full object-cover`}
+          className={twMerge(`
+            w-full h-full object-cover 
+            transition-transform duration-300 ease-in-out
+            group-hover:scale-110
+              ${className} `)}
           onError={() => {
             setImageError(true);
           }}
